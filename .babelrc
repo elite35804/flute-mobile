@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./src"],
+        "extensions": [".ios.js", ".android.js", ".js", ".json", ".ts", ".tsx"],
+        "alias": {
+          "@": "./src"
+        }
+      }
+    ],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}
